@@ -33,6 +33,18 @@ class TestSeeder extends Seeder
                 'created_at' => $now,
                 'updated_at' => $now
             ],
+            [
+                'string' => 'DATABASE TEST 4 (FOUR): This is test data from database, string field',
+                'content' => 'DATABASE TEST 4 (FOUR): This is test data from database, content field',
+                'created_at' => $now,
+                'updated_at' => $now
+            ],
+            [
+                'string' => 'DATABASE TEST 5 (FIVE): This is test data from database, string field',
+                'content' => 'DATABASE TEST 5 (FIVE): This is test data from database, content field',
+                'created_at' => $now,
+                'updated_at' => $now
+            ],
         ];
 
         app('db')->table('tests')->insert($a);
