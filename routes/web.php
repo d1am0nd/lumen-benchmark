@@ -11,6 +11,10 @@
 |
 */
 
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, OPTIONS');
+header('Access-Control-Allow-Headers: Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization');
+
 $app->get('/', function () use ($app) {
     return 'Hello';
 });

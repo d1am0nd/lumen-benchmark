@@ -13,6 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        if ($request->isMethod('OPTIONS'))
+        {
+          app()->options($request->path(), function() { return response('', 200); });
+        }
     }
 }
